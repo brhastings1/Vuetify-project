@@ -1,0 +1,10 @@
+<template>
+  <div class="about">
+    <h1>This is the AboutView Component</h1>
+  </div>
+
+</template>
+
+<script setup>
+  // 
+</script>
