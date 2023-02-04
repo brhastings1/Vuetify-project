@@ -1,0 +1,27 @@
+HTML Boilerplate     - ! -tab or enter to accept choices presented
+
+Adding tags   - tage name, select option, a:
+class or ID value    - tagname.classname, tag.class1.class2, default to div - .classname
+class or ID value    - tagname#classname
+nested tags    - tag1>nestedtag, tag.parentclass>div.childclass, for div use .parent>.child
+siblingtags    - tag1+siblingtag, tag.sibling1class+div.sibling2, for div use .sibling1+.sibling2
+
+duplicates     - for common classes, .parentclass>.childclass*2, ul>li*5
+numbered content     - ul>li{my list item $}*5, $ inc number, 
+numbered id and classes     - ul>li#myid$.myclass${{mytext$}*5
+
+lorem ipsom text     - lorem 20 for to words, p>lorem10
+groupings ()     - (p>lorem7)*5, main>(section>h1+p+button)+section
+Wrapping on and off     -alt-z
+
+attributes     - a: defaults to href, a[attname], a[attname='blank']
+add text {}     - section>h1{my header text}), nested text, p{sometext }>a{click me}+{ more text}
+
+CSS
+
+margin   - m10, m10e
+padding   - p10
+lineheight   - lh10
+width   - w20%
+display none   - dn - none,df - flex,
+background color - bgc

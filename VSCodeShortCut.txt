@@ -1,0 +1,42 @@
+Command pallet     - Ctrl-shift-p
+Format code    - Alt-shift-f
+Find   - Ctrl-f, icon 
+
+Wrap Toggle word wrap   - Alt-z
+Open / close sidebar    - Ctrl-b
+File explorer tab on sidebar     - Ctrl-shift-e
+Open specific file     - Ctrl-p, multiple ctrl-p to cycle through list of last opened - access recent files
+Reopen a tab just closed     - Ctrl-shift-t, multiple for more recent tabs
+Close active tab     - Ctrl-w
+Go to specific tab     - Alt-3 to go to third tab
+Open / close terminal     - Ctrl-~
+Move file to other pane   - Ctrl-\
+
+Fold block of code    - Ctrl-shift [ or ]
+Fold all code blocks    - Ctrl right arrow, Ctrl left arrow
+
+Toggle line / block comment     - Ctrl-/
+Add a new line comment     - Ctrl-k then Ctrl-0 or Ctrl-k then Ctrl-j
+
+
+Multiple cursors     - Alt-LMB
+Multiple cursors for lined up items     - Ctrl-alt-down or up
+Multi Selection     - Select, Ctrl-d multiple times
+Select full line   - Ctrl-l
+Delete entire line - Ctrl-X
+Select sequential   - Shift drag LMB
+Expand selection HTML   - Alt-shift-arrow
+Select all instances of a word    - Ctrl-shift-l
+
+Jump to start or end of line    - Ctrl left / right or home-end
+Jump to function definition   - Ctrl-LMB
+Jump to matching bracket    - Ctrl-Shift /
+
+Move entire selected  line or block of code     - Alt-up or down, after down, up may fix indent
+Duplicate selected line or block up or down     - Alt-shift up/down
+Indent or out-dent lines     - Ctrl-] or Ctrl-[
+
+Wrap a selection in tag  - Ctrl-Shift-P, emmet wrap, enter tag, enter
+Collapse subfolders - alt LMB to toggle between expand and collapse of its subfolders
+
+Change desktop - Win-Ctrl-Right or Left
