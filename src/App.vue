@@ -13,6 +13,9 @@
       <v-btn variant="text" router to="/">
         Home
       </v-btn>
+      <v-btn variant="text" router to="/playlines">
+        Playlines
+      </v-btn>
       <v-btn variant="text" router to="/about">
         About
       </v-btn>
