@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import MoreView from "../views/MoreView.vue";
+import PlayLinesView from "../views/PlayLinesView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
       path: "/more",
       name: "more",
       component: MoreView,
+    },
+    {
+      path: "/playlines",
+      name: "playlines",
+      component: PlayLinesView,
     },
   ],
 });

@@ -79,6 +79,7 @@ const drawer = ref(false)
 const items = [
   { text: 'Home', icon: 'mdi-clock', route: '/' },
   { text: 'About', icon: 'mdi-account', route: '/about' },
+  { text: 'Play Lines', icon: 'mdi-book-open-variant', route: '/playlines' },
   { text: 'More', icon: 'mdi-flag', route: '/more' },
 ]
 
