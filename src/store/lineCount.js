@@ -1,8 +1,8 @@
 // Utilities
 import { defineStore } from 'pinia'
 
-export const useLineCountStore = defineStore({
-    id: 'counter',
+const useLineCountStore = defineStore({
+    id: 'lineCounter',
     state: () => ({
         count: 0,
         title: 'My Counter Title'
@@ -22,3 +22,21 @@ export const useLineCountStore = defineStore({
         }
     }
 })
+
+const useLineStyleCountStore = defineStore({
+    id: 'styleCounter',
+    state: () => ({
+        count: 0,
+        title: 'My Counter Title'
+    }),
+    actions: {
+        increaseCounter() {
+            this.count++
+        },
+        decreaseCounter() {
+            this.count--
+        }
+    }
+})
+
+export { useLineCountStore, useLineStyleCountStore }

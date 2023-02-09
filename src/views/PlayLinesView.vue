@@ -6,27 +6,40 @@
       <span class="px-3"> Line counter: {{ lineCounter.count }}</span>
       <v-btn @click="lineCounter.increaseCounter" variant="outlined">increase</v-btn>
     </div>
-
+    
     <div v-for="line in lines" :key="line.id" class="line"  :class="lineMatch(line.id) ? 'bg-amber-lighten-3' : 'bg-amber-lighten-5'">{{
       line.text_a
     }}, counter: {{ lineCounter.count }}, id: {{ line.id }}, {{ lineCounter.count === line.id }}</div>
   </div>
+  
+  <div class="pa-3">
+    <v-btn @click="lineStyleCounter.decreaseCounter" variant="outlined">decrease</v-btn>
+    <span class="px-3"> Line counter: {{ lineStyleCounter.count }}</span>
+    <v-btn @click="lineStyleCounter.increaseCounter" variant="outlined">increase</v-btn>
+  </div>
+
 
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { useLineCountStore } from '@/store/lineCount'
+import { useLineStyleCountStore } from '@/store/lineCount'
 import {lineData} from '@/assets/lineData'
 
-const lineCounter = useLineCountStore()
+const lines =ref(lineData)
 
+const lineCounter = useLineCountStore()
 const lineMatch = lineNo => {
   if (lineNo === lineCounter.count) {return true}
   return false
 }
 
-const lines =ref(lineData)
+const lineStyleCounter = useLineStyleCountStore()
+const lineStyleMatch = lineNo => {
+  if (lineNo === lineStyleCounter.count) {return true}
+  return false
+}
 
 </script>
 
