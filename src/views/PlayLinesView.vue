@@ -8,16 +8,15 @@
     </div>
     
     <div v-for="line in lines" :key="line.id" class="line"  :class="lineMatch(line.id) ? 'bg-amber-lighten-3' : 'bg-amber-lighten-5'">{{
-      line.text_a
-    }}, counter: {{ lineCounter.count }}, id: {{ line.id }}, {{ lineCounter.count === line.id }}</div>
+      line.text[lineStyleIndex(line.id)]
+    }}, counter: {{ lineCounter.count }}, id: {{ line.id }}, {{ lineCounter.count === line.id }}, lineStyleMatch: {{ lineStyleIndex(line.id) }}</div>
   </div>
   
   <div class="pa-3">
     <v-btn @click="lineStyleCounter.decreaseCounter" variant="outlined">decrease</v-btn>
-    <span class="px-3"> Line counter: {{ lineStyleCounter.count }}</span>
+    <span class="px-3"> Line style counter: {{ lineStyleCounter.count }}</span>
     <v-btn @click="lineStyleCounter.increaseCounter" variant="outlined">increase</v-btn>
   </div>
-
 
 </template>
 
@@ -36,9 +35,9 @@ const lineMatch = lineNo => {
 }
 
 const lineStyleCounter = useLineStyleCountStore()
-const lineStyleMatch = lineNo => {
-  if (lineNo === lineStyleCounter.count) {return true}
-  return false
+const lineStyleIndex = lineNo => {
+  if (lineNo === lineCounter.count) {return lineStyleCounter.count}
+  return 0
 }
 
 </script>
