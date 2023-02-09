@@ -7,19 +7,17 @@
       <v-btn @click="lineCounter.increaseCounter" variant="outlined">increase</v-btn>
     </div>
 
-    <!-- <div v-for="line in lines" :key="line.id" class="line">{{ line.text_a }}</div> -->
     <div v-for="line in lines" :key="line.id" class="line"  :class="lineMatch(line.id) ? 'bg-amber-lighten-3' : 'bg-amber-lighten-5'">{{
       line.text_a
     }}, counter: {{ lineCounter.count }}, id: {{ line.id }}, {{ lineCounter.count === line.id }}</div>
   </div>
 
-  <!-- lineCounter.count === line.id -->
-
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useLineCountStore } from '@/store/lineCount';
+import { useLineCountStore } from '@/store/lineCount'
+import {lineData} from '@/assets/lineData'
 
 const lineCounter = useLineCountStore()
 
@@ -28,40 +26,8 @@ const lineMatch = lineNo => {
   return false
 }
 
+const lines =ref(lineData)
 
-const lines = ref([
-  {
-    id: 1,
-    text_a: 'This is the first line of basic text',
-    text_b: 'This is the first line of more expanded text',
-  },
-  {
-    id: 2,
-    text_a: 'This is the second line of basic text',
-    text_b: 'This is the second line of more expanded text',
-  },
-  {
-    id: 3,
-    text_a: 'This is the third line of basic text',
-    text_b: 'This is the third line of more expanded text',
-  },
-  {
-    id: 4,
-    text_a: 'This is the forth line of basic text',
-    text_b: 'This is the forth line of more expanded text',
-  },
-  {
-    id: 5,
-    text_a: 'This is the fifth line of basic text',
-    text_b: 'This is the fifth line of more expanded text',
-  },
-  {
-    id: 6,
-    text_a: 'This is the sixth line of basic text',
-    text_b: 'This is the sixth line of more expanded text',
-  },
-])
-  //
 </script>
 
 
